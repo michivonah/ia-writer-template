@@ -7,9 +7,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.example.template</string>
+	<string>ch.michivonah.alpnach</string>
 	<key>CFBundleName</key>
-	<string>Example</string>
+	<string>Alpnach</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
@@ -27,10 +27,10 @@
 	<key>IATemplateHeaderHeight</key>
 	<integer>90</integer>
 	<key>IATemplateDescription</key>
-	<string>Example template.</string>
+	<string>A handmade template for stunning documents written with iA Writer - The future of writing</string>
 	<key>IATemplateAuthor</key>
-	<string>Example</string>
+	<string>Michi von Ah</string>
 	<key>IATemplateAuthorURL</key>
-	<string>https://example.com</string>
+	<string>https://michivonah.ch</string>
 </dict>
 </plist>
