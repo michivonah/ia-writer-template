@@ -6,6 +6,7 @@
 html{
     font-family: Arial, sans-serif;
     text-align: left;
+    padding: 40px 5%;
     color: var(--color);
     --color: #000;
 }
@@ -22,6 +23,10 @@ h6{
 
 h1{
     page-break-before: always;
+}
+
+h1:first-of-type{
+    page-break-before: avoid;
 }
 
 p{
@@ -44,8 +49,8 @@ img{
 blockquote{
     padding: 10px;
     background: rgba(255, 255, 0, 0.4);
-    width: 90%;
-    margin: auto 5%;
+    width: calc(100% - 20px);
+    margin: auto 0;
     font-weight: 600;
 }
 
@@ -60,11 +65,17 @@ tr, td, th{
 
 /* Code blocks */
 pre{
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.2);
 }
 
 code{
-    color: rgb(52, 152, 219);
+    color: #000;
+}
+
+/* Other stylings */
+hr{
+    border: 2px solid;
+    border-radius: 2px;
 }
 
 /* Footer */
