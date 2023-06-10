@@ -4,11 +4,25 @@
 /* Get from https://github.com/michivonah/ia-writer-template */
 
 html{
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: left;
+    font-size: 11pt;
     color: var(--color);
     --color: #000;
+    --background: #fff;
+    --darkBackground: rgba(0, 0, 0, 0.2);
 }
+
+body{
+    margin: auto;
+    width: 100%;
+    max-width: 80%;
+}
+
+/*
+.document{
+    padding: auto 5%;
+}*/
 
 /* General text styling */
 h1,
@@ -22,10 +36,32 @@ h6{
 
 h1{
     page-break-before: always;
+    font-size: 18pt;
+    margin: 6pt 0;
+}
+
+h1:first-of-type{
+    page-break-before: avoid;
+}
+
+h2{
+    font-size: 14pt;
+    margin: 6pt 0;
+}
+
+h3{
+    font-size: 12pt;
+    margin: 6pt 0;
+}
+
+h4, h5, h6{
+    font-size: 12pt;
+    margin: 3pt 0;
 }
 
 p{
     text-align: left;
+    font-size: 11pt;
 }
 
 a, a:hover, a:focus{
@@ -42,32 +78,58 @@ img{
 
 /* Blockquotes */
 blockquote{
-    padding: 10px;
-    background: rgba(255, 255, 0, 0.4);
-    width: 90%;
-    margin: auto 5%;
+    padding: 6pt 30px;
+    background: rgba(52, 152, 219, 0.4);
+    width: calc(100% - 60px);
+    margin: auto 0;
     font-weight: 600;
+    position: relative;
+}
+
+blockquote::before{
+    content: "";
+    width: 4px;
+    height: 100%;
+    background: var(--color);
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 /* Tables */
 table{
-    border: 2px solid #000;
+    border-collapse: collapse;
+    margin: 6pt 0;
 }
 
 tr, td, th{
-    border: 2px solid #000;
+    border: 1px solid var(--color);
+    padding: 6pt;
+}
+
+thead{
+    font-weight: bold;
 }
 
 /* Code blocks */
 pre{
-    background: rgba(0, 0, 0, 0.9);
+    background: var(--darkBackground);
 }
 
 code{
-    color: rgb(52, 152, 219);
+    color: var(--color);
 }
 
-/* Footer */
-.footer{
-    text-align: right;
+/* Other stylings */
+hr{
+    border: 2px solid;
+    border-radius: 2px;
+}
+
+/* Header & Footer */
+.header, .footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
 }
