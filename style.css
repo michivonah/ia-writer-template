@@ -15,10 +15,29 @@ html{
     --blockquote: rgba(52, 152, 219, 0.4);
 }
 
+.night-mode{
+    color: var(--color);
+    background: var(--background);
+    --color: #f8f8f8;
+    --background: #181818;
+    --darkBackground: rgba(0, 0, 0, 0.2);
+    --blockquote: rgba(241, 196, 15, 0.4);
+}
+
+.ios{
+    --fontSize: 1rem;
+}
+
 body{
     margin: auto;
     width: 100%;
     max-width: 80%;
+}
+
+body .mac{
+    margin: auto;
+    width: 100%;
+    max-width: 60%;
 }
 
 /* General text styling */
