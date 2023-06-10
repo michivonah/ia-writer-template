@@ -16,8 +16,6 @@
 	<string>2</string>
 	<key>IATemplateDocumentFile</key>
 	<string>document</string>
-	<key>IATemplateTitleFile</key>
-	<string>title</string>
 	<key>IATemplateFooterFile</key>
 	<string>footer</string>
 	<key>IATemplateFooterHeight</key>
