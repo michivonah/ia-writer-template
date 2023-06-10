@@ -19,13 +19,13 @@
 	<key>IATemplateFooterFile</key>
 	<string>footer</string>
 	<key>IATemplateFooterHeight</key>
-	<integer>90</integer>
+	<integer>57</integer>
 	<key>IATemplateHeaderFile</key>
 	<string>header</string>
 	<key>IATemplateHeaderHeight</key>
-	<integer>90</integer>
+	<integer>70</integer>
 	<key>IATemplateDescription</key>
-	<string>A handmade template for stunning documents written with iA Writer - The future of writing</string>
+	<string>A handcrafted template for stunning documents written with iA Writer - The future of writing</string>
 	<key>IATemplateAuthor</key>
 	<string>Michi von Ah</string>
 	<key>IATemplateAuthorURL</key>

@@ -6,11 +6,13 @@
 html{
     font-family: Arial, Helvetica, sans-serif;
     text-align: left;
-    font-size: 11pt;
+    font-size: var(--fontSize);
     color: var(--color);
+    --fontSize: 11pt;
     --color: #000;
     --background: #fff;
     --darkBackground: rgba(0, 0, 0, 0.2);
+    --blockquote: rgba(52, 152, 219, 0.4);
 }
 
 body{
@@ -19,18 +21,8 @@ body{
     max-width: 80%;
 }
 
-/*
-.document{
-    padding: auto 5%;
-}*/
-
 /* General text styling */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6{
+h1, h2, h3, h4, h5, h6{
     color: var(--color);
 }
 
@@ -70,18 +62,38 @@ a, a:hover, a:focus{
 }
 
 /* Media */
+figure{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
 img{
     width: 80%;
     height: auto;
-    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+figcaption{
+    font-size: var(--fontSize);
+    margin: 0 0 6pt 0;
+}
+
+/* Lists */
+.task-list-item{
+    list-style-type: none;
+    margin: 0 -16pt;
+    padding: 0;
 }
 
 /* Blockquotes */
 blockquote{
-    padding: 6pt 30px;
-    background: rgba(52, 152, 219, 0.4);
+    padding: 3pt 30px;
+    background: var(--blockquote);
     width: calc(100% - 60px);
-    margin: auto 0;
+    margin: 6pt 0;
     font-weight: 600;
     position: relative;
 }
