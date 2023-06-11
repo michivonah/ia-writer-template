@@ -1,7 +1,9 @@
-# ia-writer-template
+# iA Writer Templates
 My custom templates for ia writer
 
 Learn more about iA Writer Templates: https://github.com/iainc/iA-Writer-Templates
+
+Get iA Writer: https://ia.net/writer/get/buy
 
 ## Currently created templates:
 - Alpnach (A simple document style)
