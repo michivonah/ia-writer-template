@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="144" height="44" viewBox="0 0 144 44">
+  <defs>
+    <clipPath id="clip-Logo">
+      <rect width="144" height="44"/>
+    </clipPath>
+  </defs>
+  <g id="Logo" clip-path="url(#clip-Logo)">
+    <rect width="144" height="44" fill="#fff"/>
+    <text id="YOUR_LOGO" data-name="YOUR LOGO" transform="translate(9 28)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">YOUR LOGO</tspan></text>
+    <line id="Linie_1" data-name="Linie 1" x2="59" transform="translate(9.5 32.5)" fill="none" stroke="#707070" stroke-width="3"/>
+  </g>
+</svg>

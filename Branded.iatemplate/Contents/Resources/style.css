@@ -1,0 +1,181 @@
+/* Branded by Michi von Ah */
+/* Theme for iA Writer */
+/* Version 1.0 */
+/* Get from https://github.com/michivonah/ia-writer-template */
+/* © 2023 - michivonah.ch */
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size: var(--fontSize);
+    color: var(--color);
+    white-space: normal;
+    --fontSize: 11pt;
+    --color: #000;
+    --background: #fff;
+    --blockquote: #ececec;
+}
+
+.night-mode{
+    color: var(--color);
+    background: var(--background);
+    --color: #f8f8f8;
+    --background: #181818;
+    --blockquote: rgba(241, 196, 15, 0.4);
+}
+
+.ios{
+    --fontSize: 1rem;
+}
+
+body{
+    margin: auto;
+    width: 100%;
+    max-width: 80%;
+}
+
+body .mac, body .windows{
+    margin: auto;
+    width: 100%;
+    max-width: 60%;
+}
+
+/* General text styling */
+h1, h2, h3, h4, h5, h6{
+    color: var(--color);
+}
+
+h1{
+    page-break-before: always;
+    font-size: 18pt;
+    margin: 6pt 0;
+}
+
+h1:first-of-type{
+    page-break-before: avoid;
+}
+
+h2{
+    font-size: 14pt;
+    margin: 6pt 0;
+}
+
+h3{
+    font-size: 12pt;
+    margin: 6pt 0;
+}
+
+h4, h5, h6{
+    font-size: 12pt;
+    margin: 3pt 0;
+}
+
+p{
+    text-align: left;
+    font-size: 11pt;
+}
+
+a, a:hover, a:focus{
+    text-decoration: underline;
+    color: var(--color);
+}
+
+/* Media */
+figure{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    width: 80%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+figcaption{
+    font-size: var(--fontSize);
+    margin: 0 0 6pt 0;
+}
+
+/* Lists */
+.task-list-item{
+    list-style-type: none;
+    margin: 0 -16pt;
+    padding: 0;
+}
+
+/* Blockquotes */
+blockquote{
+    padding: 3pt 30px;
+    background: var(--blockquote);
+    width: calc(100% - 60px);
+    margin: 6pt 0;
+    font-weight: 600;
+    position: relative;
+}
+
+blockquote::before{
+    content: "";
+    width: 4px;
+    height: 100%;
+    background: var(--color);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Tables */
+table{
+    border-collapse: collapse;
+    margin: 6pt 0;
+    width: 100%;
+}
+
+tr, td, th{
+    border: 1px solid var(--color);
+    padding: 6pt;
+}
+
+thead{
+    font-weight: bold;
+}
+
+/* Code blocks */
+pre{
+    background: #181818;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+code{
+    color: #f8f8f8;
+    counter-reset: codeline;
+    white-space: pre;
+    overflow: auto;
+}
+
+/*code::before{
+    counter-increment: codeline;
+    content: counter(codeline);
+    color: #c6c6c6;
+    display: inline-block;
+
+}*/
+
+/* Other stylings */
+hr{
+    border: 1px solid;
+    border-radius: 1px;
+}
+
+/* Header & Footer */
+.header, .footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    color: var(--color)
+}
