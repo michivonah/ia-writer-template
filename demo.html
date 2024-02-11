@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Tmux</title>
+</head>
+<body>
+<h1>Tmux</h1>
+
+<p>Tmux ist ein Terminal-Multiplexer. Das bedeutet mit Tmux kann mit ein Terminal in mehrere Sessions, Fenster, Spalten, etc. aufteilen. Man kann eine Session erstellen, sich davon trennen und später wieder verbinden. Sessions können mit Namen benannt und wiederverwendet werden. Sie laufen auch im Hintergrund weiter, wenn man beispielsweise die Internet-Verbindung verliert oder einen Vorgang im Hintergrund ausführen lassen möchte.
+Tmux besteht aus 3 Schichten.</p>
+
+<ul>
+<li>Sessions</li>
+<li>Windows/Fenster</li>
+<li>Panes</li>
+</ul>
+
+<p>Eine Session ist eine Sitzung. Man kann mehrere Sessions erstellen und diesen einen Namen geben. Jede Session besteht aus Windows/Fenstern und diese aus Panes. Fenster sind wie die Tabs in einem Browser. Sie füllen immer den ganzen Bildschirm aus und man kann zwischen ihnen wechseln. Die Fenster werden in der Statusleiste unten angezeigt, das aktuelle Fenster wird mit einem Stern dargestellt. Jedes Fenster besteht aus Panes. Eine Pane ist ein „Programm“, welches ausgeführt wird. Wenn eine neue Pane erstellt wird, startet diese standardmässig mit der Bash Shell. Man kann mehrere Panes erstellen und diese anordnen. Die aktuell aktive Pane, kann anhand des grünen Rahmen erkennt werden.</p>
+
+<h2>Installation</h2>
+
+<p>Die Installation erfolgt unter Linux ganz einfach per CLI.</p>
+
+<pre><code>apt install tmux -y
+</code></pre>
+<div class="page-break" style="page-break-before: always;"></div>
+
+<h2>Sessions verwalten</h2>
+
+<table>
+<colgroup>
+<col/>
+<col/>
+</colgroup>
+
+<thead>
+<tr>
+	<th>Befehl</th>
+	<th>Beschreibung</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td><code>tmux</code></td>
+	<td>Macht einfach eine Session mit fortlaufender Nummerierung</td>
+</tr>
+<tr>
+	<td><code>tmux new -s &lt;SESSIONNAME&gt;</code></td>
+	<td>Neue Session mit benutzerdefiniertem Namen erstellen</td>
+</tr>
+<tr>
+	<td><code>tmux ls</code></td>
+	<td>Alle Sessions auflisten</td>
+</tr>
+<tr>
+	<td><code>tmux a</code></td>
+	<td>Verbinden mit letzter Session</td>
+</tr>
+<tr>
+	<td><code>tmux a -t &lt;SESSIONNAME&gt;</code></td>
+	<td>Verbinden mit einer Session</td>
+</tr>
+<tr>
+	<td><code>tmux kill-session -t &lt;SESSIONNAME&gt;</code></td>
+	<td>Session schliessen</td>
+</tr>
+<tr>
+	<td><code>tmux kill-server</code></td>
+	<td>Beendet alle offenen Sessions</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Befehle</h2>
+
+<p>Mit Ctrl + B kann man Befehle ausführen. Anschliessend kann ein Befehl durch einen oder mehrere Tasten ausgeführt werden.</p>
+
+<table>
+<colgroup>
+<col/>
+<col/>
+</colgroup>
+
+<thead>
+<tr>
+	<th>Zeichen</th>
+	<th>Beschreibung</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td><code>D</code></td>
+	<td>Detach / Trennen von aktueller Session</td>
+</tr>
+<tr>
+	<td><code>%</code></td>
+	<td>Split des Fensters (nebeneinander)</td>
+</tr>
+<tr>
+	<td><code>&quot;</code></td>
+	<td>Split des Fensters (untereinander)</td>
+</tr>
+<tr>
+	<td><code>Pfeiltasten</code></td>
+	<td>Mit den Pfeiltasten kann zwischen den Panes gewechselt werden</td>
+</tr>
+<tr>
+	<td><code>Q</code></td>
+	<td>Index der Panes anzeigen</td>
+</tr>
+<tr>
+	<td><code>Q + &lt;Zahl&gt;</code></td>
+	<td>Zu Pane mit Index wechseln</td>
+</tr>
+<tr>
+	<td><code>Alt + &lt;Zahl&gt;</code></td>
+	<td>Verwenden von vorgefertigten Layouts</td>
+</tr>
+<tr>
+	<td><code>C</code></td>
+	<td>Neues Window/Fenster erstellen</td>
+</tr>
+<tr>
+	<td><code>N</code></td>
+	<td>Wechseln zu nächstem Fenster</td>
+</tr>
+<tr>
+	<td><code>,</code></td>
+	<td>Fenster umbenennen</td>
+</tr>
+<tr>
+	<td><code>W</code></td>
+	<td>Auswählen des zu öffnenden Fensters</td>
+</tr>
+<tr>
+	<td><code>X</code></td>
+	<td>Pane schliessen</td>
+</tr>
+<tr>
+	<td><code>&amp;</code></td>
+	<td>Fenster schliessen</td>
+</tr>
+<tr>
+	<td><code>[</code></td>
+	<td>Copy-Mode starten (wenn aktiviert, siehe Konfigurationsanpassung, mit Enter wird der markierte Text kopiert)</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Konfigurationsanpassungen</h2>
+
+<p>Die Konfiguration von Tmux kann in einer <code>.tmux.conf</code>-Datei angepasst werden. Diese muss im Home-Verzeichnis des Benutzers abgelegt werden.
+Beispiel Homeverzeichnis root: /root/.tmux.conf
+Beispiel User Homeverzeichnis: /home/michi/.tmux.conf</p>
+
+<p>Folgende Option ermöglicht das Kopieren per Maus, durch einfaches markieren (wie in PuTTY):</p>
+
+<pre><code>set -g mouse on
+</code></pre>
+
+<p>Es kann mit folgender Option auch das Kopieren per Tastatur aktiviert werden:</p>
+
+<pre><code>set -g mode-keys vi
+</code></pre>
+
+<p>Farben anpassen</p>
+
+<pre><code>set -g default-terminal 'screen-256color'
+</code></pre>
+
+<h2>Tmux Plugins</h2>
+
+<p>Tmux bietet die Option Plugins zu installieren, um die Funktionalität zu erweitern und weitere Themes zu ermöglichen. Es empfiehlt sich den Plugin-Store TPM für Tmux zu installieren. Dies erfolgt ganz leicht mit folgender Anleitung: <a href="https://github.com/tmux-plugins/tpm">github.com/tmux-plugins/tpm</a></p>
+
+<h3>Themes</h3>
+
+<p>Es gibt folgendes Theme, welches zu empfehlen ist.</p>
+
+<ul>
+<li><a href="https://github.com/catppuccin/tmux">Catppuccin</a></li>
+</ul>
+
+<h2>Quellen</h2>
+
+<ul>
+<li><a href="https://youtu.be/nTqu6w2wc68">YouTube Video NetworkChuck</a></li>
+<li><a href="https://tmuxcheatsheet.com/">Tmux Cheatsheet</a></li>
+<li><a href="https://youtube.com/shorts/PL1EoKjy4iM">Color-Themes</a></li>
+<li>Zusammenfassung/Erklärung by Michi</li>
+</ul>
+</body>
+</html>
